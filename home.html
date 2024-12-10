@@ -1,0 +1,189 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - CivicPath</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Formal background style with a subtle pattern */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background: linear-gradient(135deg, #6e5406,#760404);
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+        }
+
+        /* Navbar with "Welcome to CivicPath" */
+        .navbar {
+            background-color:rgb(3, 9, 32);
+            padding: 15px;
+            font-weight: bold;
+        }
+
+        .navbar .navbar-brand {
+            font-size: 2rem;
+            color: #fff;
+        
+            text-transform: uppercase;
+        }
+
+        /* Main container for content */
+        .main-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 80px); /* Adjust height to avoid navbar overlap */
+            flex-direction: column;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 50px;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Flex container for cards */
+        .cards-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .card {
+            background-color: rgb(215, 209, 209);
+            border-radius: 20px;
+            padding: 30px;
+            
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            flex: 1;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h4 {
+            font-size: 2rem;
+            color: rgb(145, 11, 11);
+            margin-bottom: 20px;
+        }
+
+        .card p {
+            color: #555;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            font-size: 1.2rem;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            text-transform: uppercase;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-success {
+            background-color: #28a745;
+            border: none;
+        }
+
+        .btn-success:hover {
+            background-color: #218838;
+        }
+
+        .btn-warning {
+            background-color: #ffc107;
+            border: none;
+        }
+
+        .btn-warning:hover {
+            background-color: #e0a800;
+        }
+
+        /* Responsive layout */
+        @media (max-width: 768px) {
+            .cards-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .card {
+                width: 100%;
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 2.5rem;
+            }
+
+            .btn {
+                font-size: 1.1rem;
+            }
+        }
+
+    </style>
+</head>
+<body>-->
+<!----
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid justify-content-center">
+            <a class="navbar-brand" href="#">WELCOME TO CIVICPATH</a>
+        </div>
+    </nav>-->
+
+    <!-- Main container -->
+    <div class="main-container">
+        <!-- Cards for Report, Resolved, and Pending Issues -->
+        <div class="cards-container">
+            <!-- Report a Problem Card -->
+            <div class="card">
+                <h4>Report a Problem</h4>
+                <p>Submit a description, image, and location of the issue you're facing.</p>
+                <a href="report.html" class="btn btn-primary">Report Now</a>
+            </div>
+            
+            <!-- View Resolved Problems Card -->
+            <div class="card">
+                <h4>View Resolved Problems</h4>
+                <p>See the problems that have been resolved by the authorities.</p>
+                <a href="resolved.html" class="btn btn-success">View Resolved</a>
+            </div>
+            
+            <!-- View Pending Problems Card -->
+            <div class="card">
+                <h4>View Pending Problems</h4>
+                <p>Check the list of issues that are still pending resolution.</p>
+                <a href="pending.html" class="btn btn-warning">View Pending</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>

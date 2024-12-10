@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CivicPath</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Add favicon -->
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f5f9;
+            color: #343a40;
+        }
+
+        /* Header Section */
+        header {
+            background: linear-gradient(to right, rgb(17, 10, 93),rgb(15, 17, 130));
+            color:whitesmoke;
+            text-align: center;
+            padding-top:20px;
+            
+            position: relative;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            height:150px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            font-weight: 700;
+
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin: 10px 0 0;
+        }
+
+        /* Main Content */
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 50px 20px;
+            min-height: calc(100vh - 200px);
+        }
+
+        .main-image {
+            width: 80%;
+            max-width: 600px;
+            height: auto;
+            margin-bottom: 30px;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .welcome-message {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #0056b3;
+            font-weight: bold;
+        }
+
+        .buttons-container {
+            margin-top: 20px;
+        }
+
+        .btn {
+            font-size: 1.2rem;
+            padding: 12px 40px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #004085;
+        }
+
+        .btn-secondary {
+            background-color: #6c757d;
+            border-color: #6c757d;
+            color: #fff;
+        }
+
+        .btn-secondary:hover {
+            background-color: #5a6268;
+        }
+
+        .btn-disabled {
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+        /* Footer Section */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #343a40;
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>CivicPath</h1>
+        <p>Bridging the gap in resolving colony issues efficiently.</p>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div id="welcomeMessage" class="welcome-message"></div> <!-- Dynamic Welcome Message -->
+        <img src="civic.jpg" alt="Civic Path" class="main-image">
+        <div class="buttons-container">
+            <a href="register.html" class="btn btn-primary">Register</a>
+            <button id="loginButton" class="btn btn-secondary btn-disabled">Login</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 CivicPath. All Rights Reserved. | <a href="#">Privacy Policy</a>
+    </footer>
+
+    <script>
+        // Enable the login button if the user is registered
+        window.onload = function () {
+            const isRegistered = localStorage.getItem("isRegistered");
+            const userName = localStorage.getItem("userName"); // Retrieve username
+            const loginButton = document.getElementById("loginButton");
+            const welcomeMessage = document.getElementById("welcomeMessage");
+
+            if (isRegistered === "true") {
+                // Enable login button
+                loginButton.classList.remove("btn-disabled");
+                loginButton.addEventListener("click", () => {
+                    window.location.href = "login.html"; // Redirect to the login page
+                });
+
+                // Show welcome message
+                if (userName) {
+                    welcomeMessage.textContent = `Welcome back, ${userName}!`;
+                }
+            } else {
+                welcomeMessage.textContent = "New here? Register to get started!";
+            }
+        };
+    </script>
+</body>
+</html>

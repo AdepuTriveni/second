@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - CivicPath</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background: url(road.jpg) no-repeat center center fixed; /* Replace with your image URL */
+            background-size: cover;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            background-color: lightslategrey;
+
+            padding: 20px;
+            font-weight: bold;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .navbar-brand {
+            font-size: 2.5rem;
+            color: #fff;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .main-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: calc(100vh - 80px);
+            text-align: center;
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 3.8rem;
+            font-weight: bold;
+            margin-bottom: 40px;
+            text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .description {
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            color: #ecf0f1;
+            line-height: 1.6;
+        }
+
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Three columns for the cards */
+            gap: 0; /* Remove gaps between cards */
+            width: 100%; /* Occupy full horizontal width */
+        }
+
+        .card {
+            background-color: rgba(45, 62, 80, 0.8); /* Slight transparency */
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            height: auto; /* Reduce vertical size */
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px); /* Subtle hover effect */
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            background-color: #16a085;
+        }
+
+        .card h4 {
+            font-size: 2.5rem;
+            color: #e74c3c;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .card p {
+            color: #ddd;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        .btn {
+            font-size: 1.2rem;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            text-transform: uppercase;
+            width: 100%;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: #3498db;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #2980b9;
+            transform: scale(1.05);
+        }
+
+        .btn-success {
+            background-color: #2ecc71;
+            border: none;
+        }
+
+        .btn-success:hover {
+            background-color: #27ae60;
+            transform: scale(1.05);
+        }
+
+        .btn-warning {
+            background-color: #f39c12;
+            border: none;
+        }
+
+        .btn-warning:hover {
+            background-color: #e67e22;
+            transform: scale(1.05);
+        }
+
+        /* Responsive layout */
+        @media (max-width: 768px) {
+            .cards-container {
+                grid-template-columns: 1fr; /* Stack cards vertically on smaller screens */
+            }
+
+            .card {
+                width: 100%;
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 2.5rem;
+            }
+
+            .btn {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid justify-content-center">
+            <h2>Welcome to CivicPath!</h2><br>
+               
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Description -->
+        
+
+        <!-- Cards for Navigation -->
+        <div class="cards-container">
+            <!-- Report a Conflict Card -->
+            <div class="card">
+                <h4>Report a Conflict</h4>
+                <p>Submit details of any issues you're facing in your area and help make your community better.</p>
+                <a href="report.html" class="btn btn-primary">Report Now</a>
+            </div>
+            
+            <!-- View Resolved Conflicts Card -->
+            <div class="card">
+                <h4>View Resolved Conflicts</h4>
+                <p>Check out issues that have been resolved by the authorities and the community.</p>
+                <a href="resolved.html" class="btn btn-success">View Resolved</a>
+            </div>
+            
+            <!-- View Pending Conflicts Card -->
+            <div class="card">
+                <h4>View Pending Conflicts</h4>
+                <p>See the issues that are still pending and need your attention.</p>
+                <a href="pending.html" class="btn btn-warning">View Pending</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
